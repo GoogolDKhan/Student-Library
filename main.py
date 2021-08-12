@@ -49,14 +49,14 @@ if __name__ == "__main__":
         4. Exit the library
         '''
         print(welcomeMsg)
-        a = int(input("Enter a choice: "))
-        if a == 1:
+        choice = int(input("Enter a choice: "))
+        if choice == 1:
             centralLibrary.displayAvailableBooks()
-        elif a == 2:
+        elif choice == 2:
             centralLibrary.borrowBook(student.requestBook())
-        elif a == 3:
+        elif choice == 3:
             centralLibrary.returnBook(student.returnBook())
-        elif a == 4:
+        elif choice == 4:
             print("Thanks for choosing Central Library. Have a great day ahead!")
             break
         else:
