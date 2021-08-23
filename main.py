@@ -1,13 +1,16 @@
 class Library:
 
+    # Constructor
     def __init__(self, listofBooks):
         self.books = listofBooks
 
+    # Method to display the books available in the library
     def displayAvailableBooks(self):
         print("Books available in this library are: ")
         for index, book in enumerate(self.books):
             print(f"{index+1}. {book}")
 
+    # Method to borrow a book from the library
     def borrowBook(self, bookName):
         if bookName in self.books:
             print(
@@ -19,6 +22,7 @@ class Library:
                 "Sorry. This book is either not available or has already been issued to someone else.")
             return False
 
+    # Method to return a book from the student to library
     def returnBook(self, bookName):
         self.books.append(bookName)
         print("Thanks for returning this book! Hope you enjoyed reading this book. Have a great day ahead!")
@@ -26,18 +30,23 @@ class Library:
 
 class Student:
 
+    # Method to request a book from the library
     def requestBook(self):
         self.book = input("Enter the name of the book you want to borrow: ")
         return self.book
 
+    # Method to return the borrowed book back to the library
     def returnBook(self):
         self.book = input("Enter the name of the book you want to return: ")
         return self.book
 
 
 if __name__ == "__main__":
+
+    # Book available in thw Central Library
     centralLibrary = Library(['Material Science', 'Mechanics of Solids', 'Fluid Mechanics',
                              'Dynamics of Machines', 'Manufacturing Process', 'Heat Transfer'])
+
     student = Student()
     while(True):
         welcomeMsg = '''
