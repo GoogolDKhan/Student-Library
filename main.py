@@ -1,21 +1,21 @@
 class Library:
 
     # Constructor
-    def __init__(self, listofBooks):
-        self.books = listofBooks
+    def __init__(self, list_of_books):
+        self.books = list_of_books
 
     # Method to display the books available in the library
-    def displayAvailableBooks(self):
+    def display_available_books(self):
         print("Books available in this library are: ")
         for index, book in enumerate(self.books):
             print(f"{index+1}. {book}")
 
     # Method to borrow a book from the library
-    def borrowBook(self, bookName):
-        if bookName in self.books:
+    def borrow_book(self, book_name):
+        if book_name in self.books:
             print(
-                f"You have been issued {bookName}. Please keep it safe and return it within 30 days")
-            self.books.remove(bookName)
+                f"You have been issued {book_name}. Please keep it safe and return it within 30 days")
+            self.books.remove(book_name)
             return True
         else:
             print(
@@ -23,20 +23,20 @@ class Library:
             return False
 
     # Method to return a book from the student to library
-    def returnBook(self, bookName):
-        self.books.append(bookName)
+    def return_book(self, book_name):
+        self.books.append(book_name)
         print("Thanks for returning this book! Hope you enjoyed reading this book. Have a great day ahead!")
 
 
 class Student:
 
     # Method to request a book from the library
-    def requestBook(self):
+    def request_book(self):
         self.book = input("Enter the name of the book you want to borrow: ")
         return self.book
 
     # Method to return the borrowed book back to the library
-    def returnBook(self):
+    def return_book(self):
         self.book = input("Enter the name of the book you want to return: ")
         return self.book
 
@@ -44,12 +44,12 @@ class Student:
 if __name__ == "__main__":
 
     # Book available in thw Central Library
-    centralLibrary = Library(['Material Science', 'Mechanics of Solids', 'Fluid Mechanics',
+    central_library = Library(['Material Science', 'Mechanics of Solids', 'Fluid Mechanics',
                              'Dynamics of Machines', 'Manufacturing Process', 'Heat Transfer'])
 
     student = Student()
     while(True):
-        welcomeMsg = '''
+        welcome_message = '''
         =====Welcome to Central Library=====
         Please choose an option:
         1. List all the books
@@ -57,14 +57,14 @@ if __name__ == "__main__":
         3. Add or Return a book
         4. Exit the library
         '''
-        print(welcomeMsg)
+        print(welcome_message)
         choice = int(input("Enter a choice: "))
         if choice == 1:
-            centralLibrary.displayAvailableBooks()
+            central_library.display_available_books()
         elif choice == 2:
-            centralLibrary.borrowBook(student.requestBook())
+            central_library.borrow_book(student.request_book())
         elif choice == 3:
-            centralLibrary.returnBook(student.returnBook())
+            central_library.return_book(student.return_book())
         elif choice == 4:
             print("Thanks for choosing Central Library. Have a great day ahead!")
             break
