@@ -7,6 +7,6 @@
 
 ## Author
 
-- This project is inspired by [CodeWithHarry](https://youtu.be/61a7UkDO50s)
+- This mini project is inspired by [CodeWithHarry](https://youtu.be/61a7UkDO50s)
 
 - Dated : 03-05-2021
