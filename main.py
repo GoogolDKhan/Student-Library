@@ -18,11 +18,10 @@ class Library:
             )
             self.books.remove(book_name)
             return True
-        else:
-            print(
-                "Sorry. This book is either not available or has already been issued to someone else."
-            )
-            return False
+        print(
+            "Sorry. This book is either not available or has already been issued to someone else."
+        )
+        return False
 
     # Method to return a book from the student to library
     def return_book(self, book_name):
