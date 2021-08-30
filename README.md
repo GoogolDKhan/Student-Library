@@ -1,4 +1,4 @@
-# Student-Library: A Library Management System
+# Student-Library: A Library Management System [![CodeFactor](https://www.codefactor.io/repository/github/googoldkhan/student-library/badge)](https://www.codefactor.io/repository/github/googoldkhan/student-library)
 
 ## What this application does
 * This application tracks the list of all the books available in the library.
